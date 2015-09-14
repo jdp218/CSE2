@@ -25,7 +25,7 @@ public class Timer{
     double TimeRemaining = DinnerTime - CurrentTime; //getting the total time remaining
 
     //Calcs and Prints
-    int Hours = (int) TimeRemaining; //dollars peeps will owe
+    int Hours = (int) TimeRemaining; //the hours slot of time value
     int TenMinutes = (int) (TimeRemaining * 10) % 10; // the ten minute slot of time value
     int Minutes = (int) (TimeRemaining * 100) % 10; // the minute slot of time value
     
