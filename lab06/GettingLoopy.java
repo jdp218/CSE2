@@ -43,12 +43,11 @@ variable have a '2' after its name as to not conflict*/
     System.out.print("FOR LOOP: ");
     int PrimesMin2 = 10;
     int PrimesMax2 = 100;
-    while (PrimesMin2 < PrimesMax2){
+    for (;PrimesMin2 < PrimesMax2;PrimesMin2++){
         if((PrimesMin2 % 2 != 0) && (PrimesMin2 % 3 != 0) && (PrimesMin2 % 4 != 0) 
         && (PrimesMin2 % 5 != 0) && (PrimesMin2 % 7 != 0) ){
             System.out.print(PrimesMin2 + " ");
         }
-        PrimesMin2++;
     }
     System.out.println(); //to clean up
 //------------------repeat #2 comment for orginization
@@ -57,13 +56,13 @@ variable have a '3' after its name as to not conflict*/
     System.out.print("DO WHILE LOOP: ");
     int PrimesMin3 = 10;
     int PrimesMax3 = 100;
-    while (PrimesMin3 < PrimesMax3){
+    do {
         if((PrimesMin3 % 2 != 0) && (PrimesMin3 % 3 != 0) && (PrimesMin3 % 4 != 0) 
         && (PrimesMin3 % 5 != 0) && (PrimesMin3 % 7 != 0) ){
             System.out.print(PrimesMin3 + " ");
         }
         PrimesMin3++;
-    }
+    }while(PrimesMin3 < PrimesMax3);
     System.out.println(); //to clean up
 
 //------------------PART 3-------------------------------
