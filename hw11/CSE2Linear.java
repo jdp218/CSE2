@@ -19,6 +19,7 @@ public class CSE2Linear{
         array1[0] = -1;
     for(int i=1; i < 15; i++){ // iterates through the array
         while (true) {
+            if(myScanner.hasNextInt()){
             array1[i] = myScanner.nextInt(); //this whole while statement ensures the 15 ints are in ascending order and between 0-100
             int MyBaseNum = array1[i-1];
             int MyBaseNum2 = array1[i];
@@ -34,6 +35,11 @@ public class CSE2Linear{
                     myScanner.nextInt();
                     }
             
+                                    }
+            else{
+                String trash = myScanner.next();
+                System.out.println("ERROR no strings plox");
+            }
         }
         
     }
@@ -45,13 +51,43 @@ public class CSE2Linear{
     
     System.out.println("Please enter an int to search for: "); //prompts user to find a grade
     int GradeChooser = myScanner.nextInt(); //gets input
-    int k = 1;
-    for(k=1; k < 15; k++){ //iterates through array and finds if there is a grade, if not next if statement
+    int y = 1;
+    int k = (int)array1.length/2;
+    for(k = (int)array1.length/2; k < array1.length; k++){ //iterates through array and finds if there is a grade, if not next if statement
         if(array1[k] == GradeChooser){
-        System.out.println(GradeChooser + " was found in " + k + " iterations");
+        y = y+1;
+        System.out.println(GradeChooser + " was found in " + y + " iterations");
         break;
         }
     }
+    int z = 1;
+    for(k = (int)array1.length/2; k > 0; k--){ //iterates through array and finds if there is a grade, if not next if statement
+        if(array1[k] == GradeChooser){
+        z = z + 1;
+        System.out.println(GradeChooser + " was found in " + z + " iterations");
+        break;
+        }
+    }
+    
+/*     int k = (int) array1.length/2;
+    for(int k = (int) array1.length/2){ //iterates through array and finds if there is a grade, if not next if statement
+        if(array1[k] == GradeChooser){ 
+        System.out.println(GradeChooser + " was found in " + k + " iterations");
+        break;
+        }
+        if(array1[k] > GradeChooser){
+            k = (int) k/2;
+        System.out.println(GradeChooser + " was found in " + k + " iterations");
+        
+        }
+        if(array1[k] < GradeChooser){
+            k = (array1.length + k)/2;
+        System.out.println(GradeChooser + " was found in " + k + " iterations");
+        
+        }
+    }  */
+    
+    
     if(k == 15){ //if nothing is found, k will be 15 and prints that nothing was found
     System.out.println("the int " + GradeChooser + " was not found");
     }
